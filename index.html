@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Celal Oğuz Kurtoğlu için temel bilgi, deneyim, akademik geçmiş ve uygulama bölümlerini içeren kişisel site."
+      content="Celal Oğuz Kurtoğlu için temel bilgi, deneyim, akademik geçmiş ve uygulama bölümlerini içeren kişisel site." data-i18n="meta_desc"
     />
     <title>Celal Oğuz Kurtoğlu | Compact Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=2" />
+    <script src="i18n/i18n.js" defer></script>
+    <script src="script.js?v=2" defer></script>
   </head>
   <body>
     <div class="page-noise" aria-hidden="true"></div>
@@ -20,18 +21,22 @@
         <span class="brand-mark">CK</span>
         <span class="brand-copy">
           <strong>Celal Oğuz Kurtoğlu</strong>
-          <small>Software Engineer / Academic Portfolio</small>
+          <small data-i18n="brand_copy">Software Engineer / Academic Portfolio</small>
         </span>
       </a>
+      <div id="lang-selector" class="lang-selector">
+        <button class="lang-btn" data-lang="tr" data-i18n="lang_tr">TR</button>
+        <button class="lang-btn" data-lang="en" data-i18n="lang_en">EN</button>
+      </div>
     </header>
 
     <main class="shell">
       <section class="portfolio-board reveal" id="board">
         <aside class="board-aside">
           <div class="identity-card">
-            <p class="eyebrow">Software Engineer</p>
+            <p class="eyebrow" data-i18n="identity_eyebrow">Software Engineer</p>
             <h1>Celal Oğuz Kurtoğlu</h1>
-            <p class="lead">
+            <p class="lead" data-i18n="identity_lead">
               Flutter, SwiftUI, Python, Java, veri bilimi ve machine learning
               alanlarında çalışan software engineer. Çukurova Üniversitesi
               Bilgisayar Mühendisliği yüksek lisans öğrencisi.
@@ -63,8 +68,8 @@
         <div class="board-main">
           <div class="board-heading">
             <div>
-              <p class="section-kicker">Profil</p>
-              <h2>Temel Bilgiler</h2>
+              <p class="section-kicker" data-i18n="board_kicker">Profil</p>
+              <h2 data-i18n="board_h2">Temel Bilgiler</h2>
             </div>
 
           </div>
@@ -78,6 +83,7 @@
               aria-selected="true"
               aria-controls="panel-general"
               data-target="general"
+              data-i18n="tab_general"
             >
               Genel Bilgiler
             </button>
@@ -90,6 +96,7 @@
               aria-controls="panel-career"
               data-target="career"
               tabindex="-1"
+              data-i18n="tab_career"
             >
               Çalışma Hayatı
             </button>
@@ -102,6 +109,7 @@
               aria-controls="panel-academic"
               data-target="academic"
               tabindex="-1"
+              data-i18n="tab_academic"
             >
               Akademik
             </button>
@@ -114,6 +122,7 @@
               aria-controls="panel-apps"
               data-target="apps"
               tabindex="-1"
+              data-i18n="tab_apps"
             >
               Uygulamalar
             </button>
@@ -126,6 +135,7 @@
               aria-controls="panel-certificates"
               data-target="certificates"
               tabindex="-1"
+              data-i18n="tab_certs"
             >
               Sertifikalar
             </button>
@@ -141,9 +151,9 @@
             >
               <div class="compact-grid compact-grid-general">
                 <article class="panel-card panel-card-large">
-                  <p class="card-kicker">Summary</p>
-                  <h3>Özet</h3>
-                  <p>
+                  <p class="card-kicker" data-i18n="card_summary_kicker">Summary</p>
+                  <h3 data-i18n="card_summary_title">Özet</h3>
+                  <p data-i18n="card_summary_text">
                     Flutter, SwiftUI, Python, Java, veri bilimi, deep learning
                     ve machine learning alanlarında deneyim. Mobil uygulama
                     geliştirme ve araştırma odaklı çalışmalar yürütüyor.
@@ -151,7 +161,7 @@
                 </article>
 
                 <article class="panel-card panel-card-wide">
-                  <p class="card-kicker">Technical stack</p>
+                  <p class="card-kicker" data-i18n="card_tech_kicker">Technical stack</p>
                   <div class="skill-cloud">
                     <span class="skill">
                       <svg viewBox="0 0 24 24" fill="currentColor" style="color: #45D1FD;"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.471 6.47H21.7l-6.46-6.468 6.46-6.46h-7.371z"/></svg>
@@ -216,10 +226,10 @@
                   <article class="timeline-card timeline-card-active">
                     <div class="timeline-head">
                       <strong>Nexcore Studios</strong>
-                      <span>2022 - Present</span>
+                      <span data-i18n="career_nexcore_date">2022 - Present</span>
                     </div>
-                    <h4>Flutter Developer</h4>
-                    <p>
+                    <h4 data-i18n="career_nexcore_title">Flutter Developer</h4>
+                    <p data-i18n="career_nexcore_desc">
                       Dart ve Flutter ile iOS / Android ürünleri geliştiriyor.
                       UI/UX tarafında ekiplerle koordineli çalışıyor.
                     </p>
@@ -230,8 +240,8 @@
                       <strong>Kodland</strong>
                       <span>2022 - 2023</span>
                     </div>
-                    <h4>Python & Unity Tutor</h4>
-                    <p>
+                    <h4 data-i18n="career_kodland_title">Python & Unity Tutor</h4>
+                    <p data-i18n="career_kodland_desc">
                       Python ve Unity öğretimi, mentorluk ve proje bazlı teknik
                       anlatım üzerine çalıştı.
                     </p>
@@ -242,8 +252,8 @@
                       <strong>Bahçeşehir University</strong>
                       <span>2021 - 2023</span>
                     </div>
-                    <h4>Student Assistant</h4>
-                    <p>
+                    <h4 data-i18n="career_bau_title">Student Assistant</h4>
+                    <p data-i18n="career_bau_desc">
                       MÜDEK kapsamındaki projede Python, JavaScript, HTML ve PHP ile
                       teknik katkı sundu.
                     </p>
@@ -263,13 +273,13 @@
               <div class="compact-grid compact-grid-academic">
                 <div class="timeline-wrapper">
                   <article class="timeline-card timeline-card-active">
-                    <p class="card-kicker">Education</p>
+                    <p class="card-kicker" data-i18n="academic_edu_kicker">Education</p>
                     <div class="timeline-head">
                       <strong>Çukurova University</strong>
                       <span>2024 - 2026</span>
                     </div>
-                    <h4>Master's Degree</h4>
-                    <p>Computer Engineering · AI / ML / DL · 3.81 GPA</p>
+                    <h4 data-i18n="academic_ms_title">Master's Degree</h4>
+                    <p data-i18n="academic_ms_desc">Computer Engineering · AI / ML / DL · 3.81 GPA</p>
                   </article>
 
                   <article class="timeline-card">
@@ -277,13 +287,13 @@
                       <strong>Bahçeşehir University</strong>
                       <span>2018 - 2023</span>
                     </div>
-                    <h4>Bachelor's Degree</h4>
-                    <p>Software Engineering · 3.6 GPA</p>
+                    <h4 data-i18n="academic_bs_title">Bachelor's Degree</h4>
+                    <p data-i18n="academic_bs_desc">Software Engineering · 3.6 GPA</p>
                   </article>
                 </div>
 
                 <article class="panel-card panel-card-wide panel-card-publication">
-                  <p class="card-kicker">Yayınlar</p>
+                  <p class="card-kicker" data-i18n="academic_pub_kicker">Yayınlar</p>
                   <div class="paper-showcase">
                     <a
                       class="paper-cover"
@@ -310,8 +320,8 @@
                     </a>
 
                     <div class="paper-details">
-                      <strong>Published Article</strong>
-                      <p>
+                      <strong data-i18n="pub_1_title">Published Article</strong>
+                      <p data-i18n="pub_1_desc">
                         Diagnostics dergisinde yayınlanan ortak çalışma. Kart
                         üzerine tıklayarak makalenin sayfasını açabilirsin.
                       </p>
@@ -326,7 +336,7 @@
                         target="_blank"
                         rel="noreferrer"
                       >
-                        Makaleyi aç
+                        <span data-i18n="pub_1_link">Makaleyi aç</span>
                       </a>
                     </div>
                   </div>
@@ -355,8 +365,8 @@
                     </a>
 
                     <div class="paper-details">
-                      <strong>Conference Proceedings</strong>
-                      <p>
+                      <strong data-i18n="pub_2_title">Conference Proceedings</strong>
+                      <p data-i18n="pub_2_desc">
                         EurasianSciEnTech 2024 konferansının proceedings book
                         içinde yer alan sözlü sunum çalışması. Kart üzerine
                         tıklayarak PDF dosyasını açabilirsin.
@@ -372,7 +382,7 @@
                         target="_blank"
                         rel="noreferrer"
                       >
-                        PDF'yi aç
+                        <span data-i18n="pub_2_link">PDF'yi aç</span>
                       </a>
                     </div>
                   </div>
@@ -391,16 +401,16 @@
             >
               <div class="app-carousel-container">
                 <div class="app-carousel-header">
-                  <div class="app-carousel-title" id="app-carousel-title">Mobil Uygulamalar</div>
+                  <div class="app-carousel-title" id="app-carousel-title" data-i18n="apps_title">Mobil Uygulamalar</div>
                   <div class="app-carousel-controls">
-                    <button class="carousel-btn" id="app-prev-btn" aria-label="Önceki Kategori" disabled>
+                    <button class="carousel-btn" id="app-prev-btn" aria-label="Önceki Kategori" data-i18n-aria="apps_prev" disabled>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
                     </button>
                     <div class="carousel-dots" id="app-carousel-dots">
                       <span class="carousel-dot active"></span>
                       <span class="carousel-dot"></span>
                     </div>
-                    <button class="carousel-btn" id="app-next-btn" aria-label="Sonraki Kategori">
+                    <button class="carousel-btn" id="app-next-btn" aria-label="Sonraki Kategori" data-i18n-aria="apps_next">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
                     </button>
                   </div>
@@ -414,14 +424,14 @@
                       <div class="compact-grid compact-grid-apps">
                 <article class="panel-card panel-card-wide app-overview">
                   <div class="app-overview-copy">
-                    <p class="card-kicker">Mobil uygulamalar</p>
-                    <h3>Nexcore Studios</h3>
-                    <p>Yayınlanan uygulamalar ve mağaza bağlantıları.</p>
+                    <p class="card-kicker" data-i18n="apps_mob_kicker">Mobil uygulamalar</p>
+                    <h3 data-i18n="apps_mob_title">Nexcore Studios</h3>
+                    <p data-i18n="apps_mob_desc">Yayınlanan uygulamalar ve mağaza bağlantıları.</p>
                   </div>
                   <div class="app-overview-strip">
-                    <span>4 uygulama</span>
-                    <span>Google Play</span>
-                    <span>App Store</span>
+                    <span data-i18n="apps_mob_strip_1">4 uygulama</span>
+                    <span data-i18n="apps_mob_strip_2">Google Play</span>
+                    <span data-i18n="apps_mob_strip_3">App Store</span>
                   </div>
                 </article>
 
@@ -437,7 +447,7 @@
                     <span class="app-platform">Role Playing</span>
                   </div>
                   <div class="app-card-copy">
-                    <p class="card-kicker">Android + iOS</p>
+                    <p class="card-kicker" data-i18n="app_platform_mobile">Android + iOS</p>
                     <h4>Mafia Life - Crime Boss</h4>
                     <p>Be the Godfather Of The Family</p>
                   </div>
@@ -473,7 +483,7 @@
                     <span class="app-platform">Interactive Story</span>
                   </div>
                   <div class="app-card-copy">
-                    <p class="card-kicker">Android + iOS</p>
+                    <p class="card-kicker" data-i18n="app_platform_mobile">Android + iOS</p>
                     <h4>Pathica - Interactive Story</h4>
                     <p>Episode Of Your Decisions</p>
                   </div>
@@ -509,7 +519,7 @@
                     <span class="app-platform">Simulation</span>
                   </div>
                   <div class="app-card-copy">
-                    <p class="card-kicker">Android + iOS</p>
+                    <p class="card-kicker" data-i18n="app_platform_mobile">Android + iOS</p>
                     <h4>Pizza Tycoon - Idle Clicker</h4>
                     <p>Epic Food &amp; Cooking Simulator</p>
                   </div>
@@ -545,7 +555,7 @@
                     <span class="app-platform">Simulation</span>
                   </div>
                   <div class="app-card-copy">
-                    <p class="card-kicker">Android + iOS</p>
+                    <p class="card-kicker" data-i18n="app_platform_mobile">Android + iOS</p>
                     <h4>Famous Clicker - Idle Empire</h4>
                     <p>Grow Tap &amp; Follower Universe</p>
                   </div>
@@ -576,13 +586,13 @@
                       <div class="compact-grid compact-grid-apps">
                         <article class="panel-card panel-card-wide app-overview web-overview" style="margin-top: 0;">
                   <div class="app-overview-copy">
-                    <p class="card-kicker">Web Uygulamaları</p>
-                    <h3>Kişisel Projeler</h3>
-                    <p>Modern arayüz ve interaktif deneyimlere sahip web platformları.</p>
+                    <p class="card-kicker" data-i18n="apps_web_kicker">Web Uygulamaları</p>
+                    <h3 data-i18n="apps_web_title">Kişisel Projeler</h3>
+                    <p data-i18n="apps_web_desc">Modern arayüz ve interaktif deneyimlere sahip web platformları.</p>
                   </div>
                   <div class="app-overview-strip">
-                    <span class="web-strip-tag">1 platform</span>
-                    <span class="web-strip-tag">Web / PWA</span>
+                    <span class="web-strip-tag" data-i18n="apps_web_strip_1">1 platform</span>
+                    <span class="web-strip-tag" data-i18n="apps_web_strip_2">Web / PWA</span>
                   </div>
                 </article>
 
@@ -600,7 +610,7 @@
                   <div class="app-card-copy">
                     <p class="card-kicker">3D & Glowing UI</p>
                     <h4>3D Dünya Canlı TV</h4>
-                    <p>Dünya üzerindeki televizyon kanallarını modern ve interaktif 3D küre ile eşzamanlı izleyin.</p>
+                    <p data-i18n="app_globe_desc">Dünya üzerindeki televizyon kanallarını modern ve interaktif 3D küre ile eşzamanlı izleyin.</p>
                   </div>
                   <div class="app-links">
                     <a
@@ -609,7 +619,7 @@
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Siteyi Aç
+                      <span data-i18n="app_globe_link">Siteyi Aç</span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
                   </div>

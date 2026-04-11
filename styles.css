@@ -1319,3 +1319,33 @@ html.js .reveal.is-visible {
     transform: none;
   }
 }
+
+/* Language Selector */
+.lang-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.lang-btn {
+  background: white;
+  border: 1px solid var(--line);
+  color: var(--text-soft);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 220ms ease;
+}
+
+.lang-btn:hover {
+  background: rgba(18, 21, 24, 0.05); /* Similar to bg-soft */
+  color: var(--text);
+}
+
+.lang-btn.active {
+  background: var(--accent, #136f63);
+  color: white;
+  border-color: var(--accent, #136f63);
+}
