@@ -120,15 +120,18 @@ const appDots = document.querySelectorAll("#app-carousel-dots .carousel-dot");
 
 if (appTrack && appPrevBtn && appNextBtn) {
   let currentAppSlide = 0;
-  const appSlideTitles = ["Mobil Uygulamalar", "Web Uygulamaları"];
+  const appSlideKeys = ["apps_title", "apps_web_kicker"];
 
   function updateAppCarousel() {
     appTrack.style.transform = `translateX(-${currentAppSlide * 100}%)`;
     
     appPrevBtn.disabled = currentAppSlide === 0;
-    appNextBtn.disabled = currentAppSlide === appSlideTitles.length - 1;
+    appNextBtn.disabled = currentAppSlide === appSlideKeys.length - 1;
     
-    appCarouselTitle.textContent = appSlideTitles[currentAppSlide];
+    appCarouselTitle.setAttribute("data-i18n", appSlideKeys[currentAppSlide]);
+    if (typeof I18N !== "undefined" && I18N.translations && I18N.translations[appSlideKeys[currentAppSlide]]) {
+      appCarouselTitle.innerHTML = I18N.translations[appSlideKeys[currentAppSlide]];
+    }
 
     appDots.forEach((dot, index) => {
       dot.classList.toggle("active", index === currentAppSlide);
@@ -143,7 +146,7 @@ if (appTrack && appPrevBtn && appNextBtn) {
   });
 
   appNextBtn.addEventListener("click", () => {
-    if (currentAppSlide < appSlideTitles.length - 1) {
+    if (currentAppSlide < appSlideKeys.length - 1) {
       currentAppSlide++;
       updateAppCarousel();
     }

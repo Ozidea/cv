@@ -74,6 +74,15 @@ select {
   mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.75), transparent 86%);
 }
 
+[data-i18n] {
+  transition: opacity 250ms ease, filter 250ms ease;
+}
+
+.lang-switching [data-i18n] {
+  opacity: 0;
+  filter: blur(4px);
+}
+
 .scroll-progress {
   position: fixed;
   inset: 0 0 auto;

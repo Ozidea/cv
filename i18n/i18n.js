@@ -75,6 +75,10 @@ const I18N = {
   
   changeLanguage: async function(lang) {
     if(this.currentLocale === lang) return;
+    
+    document.body.classList.add('lang-switching');
+    await new Promise(resolve => setTimeout(resolve, 250));
+    
     this.setCookie('lang', lang, 365);
     this.currentLocale = lang;
     document.documentElement.lang = lang;
@@ -89,6 +93,8 @@ const I18N = {
         btn.classList.remove('active');
       }
     });
+    
+    document.body.classList.remove('lang-switching');
   },
 
   setupSelector: function() {
