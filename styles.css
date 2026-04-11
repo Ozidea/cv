@@ -594,6 +594,12 @@ h4 {
   margin-top: 0.75rem;
 }
 
+.paper-showcase + .paper-showcase {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line-strong);
+}
+
 .paper-cover {
   position: relative;
   display: block;
