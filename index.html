@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Celal Oğuz Kurtoğlu için temel bilgi, deneyim, akademik geçmiş ve uygulama bölümlerini içeren kişisel site."
+    />
+    <title>Celal Oğuz Kurtoğlu | Compact Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="topbar shell">
+      <a class="brand" href="#board" aria-label="Ana alan">
+        <span class="brand-mark">CK</span>
+        <span class="brand-copy">
+          <strong>Celal Oğuz Kurtoğlu</strong>
+          <small>Software Engineer / Academic Portfolio</small>
+        </span>
+      </a>
+    </header>
+
+    <main class="shell">
+      <section class="portfolio-board reveal" id="board">
+        <aside class="board-aside">
+          <div class="identity-card">
+            <p class="eyebrow">Software Engineer</p>
+            <h1>Celal Oğuz Kurtoğlu</h1>
+            <p class="lead">
+              Flutter, SwiftUI, Python, Java, veri bilimi ve machine learning
+              alanlarında çalışan software engineer. Çukurova Üniversitesi
+              Bilgisayar Mühendisliği yüksek lisans öğrencisi.
+            </p>
+          </div>
+
+          <div class="aside-grid">
+            <article class="mini-card mini-card-dark">
+              <span>Current role</span>
+              <strong>Nexcore Studios</strong>
+              <small>Flutter Developer</small>
+            </article>
+          </div>
+        </aside>
+
+        <div class="board-main">
+          <div class="board-heading">
+            <div>
+              <p class="section-kicker">Profil</p>
+              <h2>Temel Bilgiler</h2>
+            </div>
+            <p>
+              CV bilgileri sekmeler altında toplandı.
+            </p>
+          </div>
+
+          <div class="tabbar" role="tablist" aria-label="Profil sekmeleri">
+            <button
+              class="tab-button is-active"
+              id="tab-general"
+              role="tab"
+              type="button"
+              aria-selected="true"
+              aria-controls="panel-general"
+              data-target="general"
+            >
+              Genel Bilgiler
+            </button>
+            <button
+              class="tab-button"
+              id="tab-career"
+              role="tab"
+              type="button"
+              aria-selected="false"
+              aria-controls="panel-career"
+              data-target="career"
+              tabindex="-1"
+            >
+              Çalışma Hayatı
+            </button>
+            <button
+              class="tab-button"
+              id="tab-academic"
+              role="tab"
+              type="button"
+              aria-selected="false"
+              aria-controls="panel-academic"
+              data-target="academic"
+              tabindex="-1"
+            >
+              Akademik
+            </button>
+            <button
+              class="tab-button"
+              id="tab-apps"
+              role="tab"
+              type="button"
+              aria-selected="false"
+              aria-controls="panel-apps"
+              data-target="apps"
+              tabindex="-1"
+            >
+              Uygulamalar
+            </button>
+            <button
+              class="tab-button"
+              id="tab-certificates"
+              role="tab"
+              type="button"
+              aria-selected="false"
+              aria-controls="panel-certificates"
+              data-target="certificates"
+              tabindex="-1"
+            >
+              Sertifikalar
+            </button>
+          </div>
+
+          <div class="panel-stage">
+            <section
+              class="tab-panel is-active"
+              id="panel-general"
+              role="tabpanel"
+              aria-labelledby="tab-general"
+              data-panel="general"
+            >
+              <div class="compact-grid compact-grid-general">
+                <article class="panel-card panel-card-large">
+                  <p class="card-kicker">Summary</p>
+                  <h3>Özet</h3>
+                  <p>
+                    Flutter, SwiftUI, Python, Java, veri bilimi, deep learning
+                    ve machine learning alanlarında deneyim. Mobil uygulama
+                    geliştirme ve araştırma odaklı çalışmalar yürütüyor.
+                  </p>
+                </article>
+
+                <article class="panel-card panel-card-wide">
+                  <p class="card-kicker">Technical stack</p>
+                  <div class="skill-cloud">
+                    <span>Flutter</span>
+                    <span>SwiftUI</span>
+                    <span>Python</span>
+                    <span>Java</span>
+                    <span>Data Science</span>
+                    <span>Deep Learning</span>
+                    <span>Machine Learning</span>
+                    <span>SQL</span>
+                    <span>Firebase</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                  </div>
+                </article>
+
+                <article class="metric-tile">
+                  <span>Profile mode</span>
+                  <strong>Research + Product</strong>
+                </article>
+                <article class="metric-tile">
+                  <span>Experience range</span>
+                  <strong>2021 - Present</strong>
+                </article>
+                <article class="metric-tile">
+                  <span>Primary focus</span>
+                  <strong>Cross-platform engineering</strong>
+                </article>
+              </div>
+            </section>
+
+            <section
+              class="tab-panel"
+              id="panel-career"
+              role="tabpanel"
+              aria-labelledby="tab-career"
+              data-panel="career"
+              hidden
+            >
+              <div class="compact-grid compact-grid-career">
+                <article class="panel-card panel-card-large">
+                  <p class="card-kicker">Career overview</p>
+                  <h3>İş Deneyimi</h3>
+                  <p>
+                    Ürün geliştirme, teknik destek ve eğitim odaklı deneyimler.
+                  </p>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-head">
+                    <strong>Nexcore Studios</strong>
+                    <span>2022 - Present</span>
+                  </div>
+                  <h4>Flutter Developer</h4>
+                  <p>
+                    Dart ve Flutter ile iOS / Android ürünleri geliştiriyor.
+                    UI/UX tarafında ekiplerle koordineli çalışıyor.
+                  </p>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-head">
+                    <strong>Kodland</strong>
+                    <span>2022 - 2023</span>
+                  </div>
+                  <h4>Python & Unity Tutor</h4>
+                  <p>
+                    Python ve Unity öğretimi, mentorluk ve proje bazlı teknik
+                    anlatım üzerine çalıştı.
+                  </p>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-head">
+                    <strong>Bahçeşehir University</strong>
+                    <span>2021 - 2023</span>
+                  </div>
+                  <h4>Student Assistant</h4>
+                  <p>
+                    MÜDEK kapsamındaki projede Python, JavaScript, HTML ve PHP ile
+                    teknik katkı sundu.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section
+              class="tab-panel"
+              id="panel-academic"
+              role="tabpanel"
+              aria-labelledby="tab-academic"
+              data-panel="academic"
+              hidden
+            >
+              <div class="compact-grid compact-grid-academic">
+                <article class="panel-card">
+                  <p class="card-kicker">Education</p>
+                  <div class="stack-block">
+                    <strong>Çukurova University</strong>
+                    <span>Master's Degree · 2024 - Present</span>
+                    <p>Computer Engineering · AI / ML / DL</p>
+                  </div>
+                  <div class="stack-block">
+                    <strong>Bahçeşehir University</strong>
+                    <span>Bachelor's Degree · 2018 - 2023</span>
+                    <p>Software Engineering · 3.6 GPA</p>
+                  </div>
+                </article>
+
+                <article class="panel-card panel-card-large">
+                  <p class="card-kicker">Research focus</p>
+                  <h3>Research Topic</h3>
+                  <p>
+                    Predicting Maternal Health Risks with Advanced Machine
+                    Learning Models
+                  </p>
+                </article>
+
+                <article class="panel-card">
+                  <p class="card-kicker">Tez</p>
+                  <div class="publication-card">
+                    <strong>Master's Thesis</strong>
+                    <span>Ongoing</span>
+                  </div>
+                </article>
+
+                <article class="panel-card panel-card-wide panel-card-publication">
+                  <p class="card-kicker">Yayınlanan Makale</p>
+                  <div class="paper-showcase">
+                    <a
+                      class="paper-cover"
+                      href="https://www.mdpi.com/2075-4418/15/4/405"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Published paper: Evaluation of the Performance of a YOLOv10-Based Deep Learning Model for Tooth Detection and Numbering on Panoramic Radiographs of Patients in the Mixed Dentition Period"
+                    >
+                      <div class="paper-cover-spine" aria-hidden="true"></div>
+                      <div class="paper-cover-page">
+                        <span class="paper-journal">Diagnostics</span>
+                        <h4>
+                          Evaluation of the Performance of a YOLOv10-Based Deep
+                          Learning Model for Tooth Detection and Numbering on
+                          Panoramic Radiographs of Patients in the Mixed
+                          Dentition Period
+                        </h4>
+                        <p class="paper-authors">
+                          Ramazan Berkay Peker, Celal Oğuz Kurtoğlu
+                        </p>
+                        <span class="paper-meta-line">2025 · Vol 15 · Issue 4 · 405</span>
+                        <span class="paper-meta-line">DOI: 10.3390/diagnostics15040405</span>
+                      </div>
+                    </a>
+
+                    <div class="paper-details">
+                      <strong>Published Article</strong>
+                      <p>
+                        Diagnostics dergisinde yayınlanan ortak çalışma. Kart
+                        üzerine tıklayarak makalenin sayfasını açabilirsin.
+                      </p>
+                      <div class="paper-tags">
+                        <span>YOLOv10</span>
+                        <span>Deep Learning</span>
+                        <span>Panoramic Radiographs</span>
+                      </div>
+                      <a
+                        class="text-link"
+                        href="https://www.mdpi.com/2075-4418/15/4/405"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Makaleyi aç
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </section>
+
+            <section
+              class="tab-panel"
+              id="panel-apps"
+              role="tabpanel"
+              aria-labelledby="tab-apps"
+              data-panel="apps"
+              hidden
+            >
+              <div class="compact-grid compact-grid-apps">
+                <article class="panel-card panel-card-wide app-overview">
+                  <div class="app-overview-copy">
+                    <p class="card-kicker">Mobil uygulamalar</p>
+                    <h3>Nexcore Studios</h3>
+                    <p>Yayınlanan uygulamalar ve mağaza bağlantıları.</p>
+                  </div>
+                  <div class="app-overview-strip">
+                    <span>4 uygulama</span>
+                    <span>Google Play</span>
+                    <span>App Store</span>
+                  </div>
+                </article>
+
+                <article class="panel-card app-card">
+                  <div class="app-card-head">
+                    <div class="app-mark">
+                      <img
+                        class="app-icon"
+                        src="assets/apps/mafia-life.jpg"
+                        alt="Mafia Life - Crime Boss app icon"
+                      />
+                    </div>
+                    <span class="app-platform">Role Playing</span>
+                  </div>
+                  <div class="app-card-copy">
+                    <p class="card-kicker">Android + iOS</p>
+                    <h4>Mafia Life - Crime Boss</h4>
+                    <p>Be the Godfather Of The Family</p>
+                  </div>
+                  <div class="app-links">
+                    <a
+                      class="store-link"
+                      href="https://play.google.com/store/apps/details?id=com.nexcorestudios.mafiabitlife"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Google Play
+                    </a>
+                    <a
+                      class="store-link store-link-apple"
+                      href="https://apps.apple.com/us/app/mafia-life-crime-boss/id6737719947"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      App Store
+                    </a>
+                  </div>
+                </article>
+
+                <article class="panel-card app-card">
+                  <div class="app-card-head">
+                    <div class="app-mark">
+                      <img
+                        class="app-icon"
+                        src="assets/apps/pathica.jpg"
+                        alt="Pathica - Interactive Story app icon"
+                      />
+                    </div>
+                    <span class="app-platform">Interactive Story</span>
+                  </div>
+                  <div class="app-card-copy">
+                    <p class="card-kicker">Android + iOS</p>
+                    <h4>Pathica - Interactive Story</h4>
+                    <p>Episode Of Your Decisions</p>
+                  </div>
+                  <div class="app-links">
+                    <a
+                      class="store-link"
+                      href="https://play.google.com/store/apps/details?id=com.nexcorestudios.justgetonemilliondollar"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Google Play
+                    </a>
+                    <a
+                      class="store-link store-link-apple"
+                      href="https://apps.apple.com/us/app/pathica-interactive-story/id6630376020"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      App Store
+                    </a>
+                  </div>
+                </article>
+
+                <article class="panel-card app-card">
+                  <div class="app-card-head">
+                    <div class="app-mark">
+                      <img
+                        class="app-icon"
+                        src="assets/apps/pizza-tycoon.jpg"
+                        alt="Pizza Tycoon - Idle Clicker app icon"
+                      />
+                    </div>
+                    <span class="app-platform">Simulation</span>
+                  </div>
+                  <div class="app-card-copy">
+                    <p class="card-kicker">Android + iOS</p>
+                    <h4>Pizza Tycoon - Idle Clicker</h4>
+                    <p>Epic Food &amp; Cooking Simulator</p>
+                  </div>
+                  <div class="app-links">
+                    <a
+                      class="store-link"
+                      href="https://play.google.com/store/apps/details?id=com.nexcorestudios.pizzaclicker"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Google Play
+                    </a>
+                    <a
+                      class="store-link store-link-apple"
+                      href="https://apps.apple.com/us/app/pizza-tycoon-idle-clicker/id6479598394"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      App Store
+                    </a>
+                  </div>
+                </article>
+
+                <article class="panel-card app-card">
+                  <div class="app-card-head">
+                    <div class="app-mark">
+                      <img
+                        class="app-icon"
+                        src="assets/apps/famous-clicker.jpg"
+                        alt="Famous Clicker - Idle Empire app icon"
+                      />
+                    </div>
+                    <span class="app-platform">Simulation</span>
+                  </div>
+                  <div class="app-card-copy">
+                    <p class="card-kicker">Android + iOS</p>
+                    <h4>Famous Clicker - Idle Empire</h4>
+                    <p>Grow Tap &amp; Follower Universe</p>
+                  </div>
+                  <div class="app-links">
+                    <a
+                      class="store-link"
+                      href="https://play.google.com/store/apps/details?id=com.nexcorestudios.famousclickergrowempire"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Google Play
+                    </a>
+                    <a
+                      class="store-link store-link-apple"
+                      href="https://apps.apple.com/us/app/famous-clicker-idle-empire/id6469772454"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      App Store
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section
+              class="tab-panel"
+              id="panel-certificates"
+              role="tabpanel"
+              aria-labelledby="tab-certificates"
+              data-panel="certificates"
+              hidden
+            >
+              <div class="compact-grid compact-grid-certificates">
+                <article class="panel-card panel-card-large certificate-intro">
+                  <p class="card-kicker">Sertifikalar</p>
+                  <h3>Drive klasöründeki PDF sertifikalar preview kartlarıyla eklendi.</h3>
+                  <p>
+                    Her kart ilk sayfa görselini gösterir. Kart tıklanınca ilgili
+                    PDF dosyası açılır.
+                  </p>
+                </article>
+
+                <div class="certificate-grid">
+                  <a class="certificate-card" href="assets/certificates/coursera-3XE36RET984V.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-3XE36RET984V.png" alt="Coursera certificate 3XE36RET984V preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate 3XE36RET984V</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-9R2H5Y348E3B.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-9R2H5Y348E3B.png" alt="Coursera certificate 9R2H5Y348E3B preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate 9R2H5Y348E3B</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-CA3SH2QNV4YF.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-CA3SH2QNV4YF.png" alt="Coursera certificate CA3SH2QNV4YF preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate CA3SH2QNV4YF</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-CG5KKGR9KQUG.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-CG5KKGR9KQUG.png" alt="Coursera certificate CG5KKGR9KQUG preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate CG5KKGR9KQUG</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-CL6NHAE2TWYL.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-CL6NHAE2TWYL.png" alt="Coursera certificate CL6NHAE2TWYL preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate CL6NHAE2TWYL</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-DKGK5TW3D2HT.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-DKGK5TW3D2HT.png" alt="Coursera certificate DKGK5TW3D2HT preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate DKGK5TW3D2HT</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-FEPSADEXBP9A.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-FEPSADEXBP9A.png" alt="Coursera certificate FEPSADEXBP9A preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate FEPSADEXBP9A</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-GJSU7Q4WC4XV.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-GJSU7Q4WC4XV.png" alt="Coursera certificate GJSU7Q4WC4XV preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate GJSU7Q4WC4XV</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-MMFSR4ZE5WWR.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-MMFSR4ZE5WWR.png" alt="Coursera certificate MMFSR4ZE5WWR preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate MMFSR4ZE5WWR</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-N2V9S7JZD9BK.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-N2V9S7JZD9BK.png" alt="Coursera certificate N2V9S7JZD9BK preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate N2V9S7JZD9BK</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-R97JTSH6QGHV.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-R97JTSH6QGHV.png" alt="Coursera certificate R97JTSH6QGHV preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate R97JTSH6QGHV</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-RVXT9RNG2JYY.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-RVXT9RNG2JYY.png" alt="Coursera certificate RVXT9RNG2JYY preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate RVXT9RNG2JYY</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/coursera-VPM4J3GYKE3C.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/coursera-VPM4J3GYKE3C.png" alt="Coursera certificate VPM4J3GYKE3C preview" />
+                    <div class="certificate-meta"><span>Coursera</span><strong>Certificate VPM4J3GYKE3C</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/oguz-kurtoglu.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/oguz-kurtoglu.png" alt="Oguz Kurtoglu certificate preview" />
+                    <div class="certificate-meta"><span>Certificate</span><strong>OguzKurtoglu.pdf</strong></div>
+                  </a>
+                  <a class="certificate-card" href="assets/certificates/uc-c1ebfa25-b825-4467-9b2e-a9c5f3ac33b3.pdf" target="_blank" rel="noreferrer">
+                    <img class="certificate-preview" src="assets/certificates/previews/uc-c1ebfa25-b825-4467-9b2e-a9c5f3ac33b3.png" alt="UC certificate preview" />
+                    <div class="certificate-meta"><span>Certificate</span><strong>UC-c1ebfa25-b825...</strong></div>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
