@@ -357,6 +357,51 @@ h4 {
   background: linear-gradient(135deg, var(--accent-soft), var(--warm-soft));
 }
 
+.mini-card-social {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: white;
+  color: var(--text);
+  transition: transform 220ms var(--ease), box-shadow 220ms var(--ease), border-color 220ms ease;
+}
+
+.mini-card-social:hover,
+.mini-card-social:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18, 21, 24, 0.06);
+  border-color: var(--line-strong);
+  outline: none;
+}
+
+.social-icon {
+  flex-shrink: 0;
+  color: var(--text-faint);
+  transition: color 220ms ease;
+}
+
+.mini-card-social:hover .social-icon {
+  color: var(--accent);
+}
+
+.mini-card-social div {
+  display: grid;
+  overflow: hidden;
+}
+
+.mini-card-social strong {
+  margin-top: 0;
+}
+
+.mini-card-social small {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .board-main {
   padding: 1rem;
 }
