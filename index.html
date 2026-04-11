@@ -389,7 +389,29 @@
               data-panel="apps"
               hidden
             >
-              <div class="compact-grid compact-grid-apps">
+              <div class="app-carousel-container">
+                <div class="app-carousel-header">
+                  <div class="app-carousel-title" id="app-carousel-title">Mobil Uygulamalar</div>
+                  <div class="app-carousel-controls">
+                    <button class="carousel-btn" id="app-prev-btn" aria-label="Önceki Kategori" disabled>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="carousel-dots" id="app-carousel-dots">
+                      <span class="carousel-dot active"></span>
+                      <span class="carousel-dot"></span>
+                    </div>
+                    <button class="carousel-btn" id="app-next-btn" aria-label="Sonraki Kategori">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="app-carousel-viewport">
+                  <div class="app-carousel-track" id="app-carousel-track">
+                    
+                    <!-- Slide 1: Mobil Uygulamalar -->
+                    <div class="app-carousel-slide">
+                      <div class="compact-grid compact-grid-apps">
                 <article class="panel-card panel-card-wide app-overview">
                   <div class="app-overview-copy">
                     <p class="card-kicker">Mobil uygulamalar</p>
@@ -546,6 +568,57 @@
                     </a>
                   </div>
                 </article>
+                      </div>
+                    </div>
+
+                    <!-- Slide 2: Web Uygulamalar -->
+                    <div class="app-carousel-slide">
+                      <div class="compact-grid compact-grid-apps">
+                        <article class="panel-card panel-card-wide app-overview web-overview" style="margin-top: 0;">
+                  <div class="app-overview-copy">
+                    <p class="card-kicker">Web Uygulamaları</p>
+                    <h3>Kişisel Projeler</h3>
+                    <p>Modern arayüz ve interaktif deneyimlere sahip web platformları.</p>
+                  </div>
+                  <div class="app-overview-strip">
+                    <span class="web-strip-tag">1 platform</span>
+                    <span class="web-strip-tag">Web / PWA</span>
+                  </div>
+                </article>
+
+                <article class="panel-card app-card web-card">
+                  <div class="app-card-head">
+                    <div class="app-mark web-app-mark">
+                      <img
+                        class="app-icon"
+                        src="assets/apps/globe-live-tv.png"
+                        alt="3D Dünya Canlı TV app icon"
+                      />
+                    </div>
+                    <span class="app-platform web-platform">Interactive App</span>
+                  </div>
+                  <div class="app-card-copy">
+                    <p class="card-kicker">3D & Glowing UI</p>
+                    <h4>3D Dünya Canlı TV</h4>
+                    <p>Dünya üzerindeki televizyon kanallarını modern ve interaktif 3D küre ile eşzamanlı izleyin.</p>
+                  </div>
+                  <div class="app-links">
+                    <a
+                      class="store-link store-link-web"
+                      href="https://globe-live-tv.netlify.app"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Siteyi Aç
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                  </div>
+                </article>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
               </div>
             </section>
 

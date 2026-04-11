@@ -110,3 +110,42 @@ window.addEventListener("resize", requestScrollUpdate);
 
 activateTab("general");
 updateScrollState();
+
+// App Carousel Logic (PageView Style)
+const appTrack = document.getElementById("app-carousel-track");
+const appPrevBtn = document.getElementById("app-prev-btn");
+const appNextBtn = document.getElementById("app-next-btn");
+const appCarouselTitle = document.getElementById("app-carousel-title");
+const appDots = document.querySelectorAll("#app-carousel-dots .carousel-dot");
+
+if (appTrack && appPrevBtn && appNextBtn) {
+  let currentAppSlide = 0;
+  const appSlideTitles = ["Mobil Uygulamalar", "Web Uygulamaları"];
+
+  function updateAppCarousel() {
+    appTrack.style.transform = `translateX(-${currentAppSlide * 100}%)`;
+    
+    appPrevBtn.disabled = currentAppSlide === 0;
+    appNextBtn.disabled = currentAppSlide === appSlideTitles.length - 1;
+    
+    appCarouselTitle.textContent = appSlideTitles[currentAppSlide];
+
+    appDots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentAppSlide);
+    });
+  }
+
+  appPrevBtn.addEventListener("click", () => {
+    if (currentAppSlide > 0) {
+      currentAppSlide--;
+      updateAppCarousel();
+    }
+  });
+
+  appNextBtn.addEventListener("click", () => {
+    if (currentAppSlide < appSlideTitles.length - 1) {
+      currentAppSlide++;
+      updateAppCarousel();
+    }
+  });
+}
