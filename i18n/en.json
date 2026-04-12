@@ -9,7 +9,7 @@
   "tab_apps": "Applications",
   "tab_certs": "Certificates",
   "identity_eyebrow": "Software Engineer",
-  "identity_lead": "Software engineer working in Flutter, SwiftUI, Python, Java, data science, and machine learning. Computer Engineering master's student at Çukurova University.",
+  "identity_lead": "Software engineer focused on mobile development with Flutter and SwiftUI, studying artificial intelligence and machine learning.",
   "card_summary_kicker": "Summary",
   "card_summary_title": "Summary",
   "card_summary_text": "Experience in Flutter, SwiftUI, Python, Java, data science, deep learning, and machine learning. Conducts mobile app development and research-oriented studies.",
@@ -50,6 +50,10 @@
   "app_globe_desc": "Watch television channels around the world simultaneously with a modern and interactive 3D globe.",
   "app_globe_link": "Open Site",
   "app_platform_mobile": "Android + iOS",
+  "cv_download_title": "Download CV",
+  "cv_download_desc": "Save as PDF",
+  "cv_download_prompt": "Enter file name (extension is optional):",
+  "cv_download_error": "CV could not be downloaded. Please try again.",
   "lang_tr": "TR",
   "lang_en": "EN"
 }

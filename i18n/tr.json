@@ -9,7 +9,7 @@
   "tab_apps": "Uygulamalar",
   "tab_certs": "Sertifikalar",
   "identity_eyebrow": "Software Engineer",
-  "identity_lead": "Flutter, SwiftUI, Python, Java, veri bilimi ve machine learning alanlarında çalışan software engineer. Çukurova Üniversitesi Bilgisayar Mühendisliği yüksek lisans öğrencisi.",
+  "identity_lead": "Flutter ve SwiftUI ile mobil geliştirmeye odaklanan, yapay zekâ ve makine öğrenimi üzerine çalışan bir yazılım mühendisi.",
   "card_summary_kicker": "Summary",
   "card_summary_title": "Özet",
   "card_summary_text": "Flutter, SwiftUI, Python, Java, veri bilimi, deep learning ve machine learning alanlarında deneyim. Mobil uygulama geliştirme ve araştırma odaklı çalışmalar yürütüyor.",
@@ -50,6 +50,10 @@
   "app_globe_desc": "Dünya üzerindeki televizyon kanallarını modern ve interaktif 3D küre ile eşzamanlı izleyin.",
   "app_globe_link": "Siteyi Aç",
   "app_platform_mobile": "Android + iOS",
+  "cv_download_title": "CV İndir",
+  "cv_download_desc": "PDF olarak kaydet",
+  "cv_download_prompt": "Dosya adını gir (uzantı yazmana gerek yok):",
+  "cv_download_error": "CV indirilemedi. Lütfen tekrar dene.",
   "lang_tr": "TR",
   "lang_en": "EN"
 }

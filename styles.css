@@ -412,6 +412,17 @@ h4 {
   overflow: hidden;
 }
 
+.cv-download-btn {
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.cv-download-btn:disabled {
+  opacity: 0.8;
+  cursor: progress;
+}
+
 .mini-card-social strong {
   margin-top: 0;
 }
