@@ -55,5 +55,6 @@
   "cv_download_prompt": "Dosya adını gir (uzantı yazmana gerek yok):",
   "cv_download_error": "CV indirilemedi. Lütfen tekrar dene.",
   "lang_tr": "TR",
-  "lang_en": "EN"
+  "lang_en": "EN",
+  "theme_toggle_aria": "Koyu modu aç veya kapat"
 }

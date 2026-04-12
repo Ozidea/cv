@@ -1,5 +1,77 @@
 document.documentElement.classList.add("js");
 
+const THEME_STORAGE_KEY = "theme";
+const themeToggleButton = document.getElementById("theme-toggle");
+const themeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+function getStoredTheme() {
+  try {
+    const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    return storedTheme === "dark" || storedTheme === "light" ? storedTheme : null;
+  } catch (_error) {
+    return null;
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+  } catch (_error) {
+    // Ignore storage errors (private mode, blocked storage, etc.).
+  }
+}
+
+function applyTheme(theme) {
+  const normalizedTheme = theme === "dark" ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", normalizedTheme);
+
+  if (themeToggleButton) {
+    themeToggleButton.setAttribute("aria-pressed", String(normalizedTheme === "dark"));
+  }
+}
+
+function getPreferredTheme() {
+  const storedTheme = getStoredTheme();
+  if (storedTheme) {
+    return storedTheme;
+  }
+
+  const alreadyAppliedTheme = document.documentElement.getAttribute("data-theme");
+  if (alreadyAppliedTheme === "dark" || alreadyAppliedTheme === "light") {
+    return alreadyAppliedTheme;
+  }
+
+  return themeMediaQuery.matches ? "dark" : "light";
+}
+
+function initTheme() {
+  applyTheme(getPreferredTheme());
+
+  if (themeToggleButton) {
+    themeToggleButton.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+      saveTheme(nextTheme);
+    });
+  }
+
+  const handleSystemThemeChange = (event) => {
+    if (getStoredTheme()) {
+      return;
+    }
+    applyTheme(event.matches ? "dark" : "light");
+  };
+
+  if (typeof themeMediaQuery.addEventListener === "function") {
+    themeMediaQuery.addEventListener("change", handleSystemThemeChange);
+  } else if (typeof themeMediaQuery.addListener === "function") {
+    themeMediaQuery.addListener(handleSystemThemeChange);
+  }
+}
+
+initTheme();
+
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const progressBar = document.querySelector(".scroll-progress span");

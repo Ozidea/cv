@@ -55,5 +55,6 @@
   "cv_download_prompt": "Enter file name (extension is optional):",
   "cv_download_error": "CV could not be downloaded. Please try again.",
   "lang_tr": "TR",
-  "lang_en": "EN"
+  "lang_en": "EN",
+  "theme_toggle_aria": "Toggle dark mode"
 }
