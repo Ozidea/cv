@@ -955,11 +955,13 @@ h4 {
   justify-content: flex-end;
 }
 
-.app-overview-strip span,
+.app-overview-strip > span:not(.app-strip-pill),
+.app-overview-strip .app-strip-pill,
 .app-platform {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.45rem;
   padding: 0.5rem 0.72rem;
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -967,6 +969,26 @@ h4 {
   color: var(--text-soft);
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.app-strip-pill > span {
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 0;
+}
+
+.app-strip-store-logo {
+  flex-shrink: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.app-strip-pill .store-logo--apple {
+  width: 17px;
+  height: 17px;
 }
 
 .app-card {
@@ -1050,6 +1072,7 @@ h4 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   min-height: 2.6rem;
   padding: 0.7rem 0.95rem;
   border-radius: 999px;
@@ -1061,6 +1084,23 @@ h4 {
     transform 220ms var(--ease),
     box-shadow 220ms var(--ease),
     background-color 220ms ease;
+}
+
+.store-link-logo {
+  flex-shrink: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.store-link-apple .store-link-logo {
+  width: 17px;
+  height: 17px;
+}
+
+html[data-theme="dark"] .store-logo--apple {
+  filter: brightness(0) invert(1);
 }
 
 .store-link:hover,

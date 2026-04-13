@@ -1,5 +1,6 @@
 const CV_FILE_PATH = "assets/CV.pdf";
-const DEFAULT_CV_FILENAME = "Celal-Oguz-Kurtoglu-CV.pdf";
+const DEFAULT_CV_BASENAME = "Celal-Oguz-Kurtoglu-CV";
+const DEFAULT_CV_FILENAME = `${DEFAULT_CV_BASENAME}.pdf`;
 
 function getCvI18nText(key, fallback) {
   if (typeof I18N !== "undefined" && I18N.translations && I18N.translations[key]) {
@@ -8,14 +9,23 @@ function getCvI18nText(key, fallback) {
   return fallback;
 }
 
+/** Drops the last dotted segment so the download is always forced to .pdf. */
+function stripTrailingExtensionForCvName(input) {
+  const trimmed = input.trim();
+  const lastDot = trimmed.lastIndexOf(".");
+  if (lastDot <= 0) {
+    return trimmed;
+  }
+  return trimmed.slice(0, lastDot);
+}
+
 function normalizeCvFileName(input) {
-  const safeName = input
-    .replace(/\.pdf$/i, "")
+  const base = stripTrailingExtensionForCvName(input)
     .replace(/[<>:"/\\|?*\x00-\x1f]/g, "")
     .trim()
     .replace(/\s+/g, "-");
 
-  return safeName ? `${safeName}.pdf` : DEFAULT_CV_FILENAME;
+  return base ? `${base}.pdf` : DEFAULT_CV_FILENAME;
 }
 
 async function downloadCvWithName(fileName) {
@@ -45,9 +55,9 @@ function setupCvDownload() {
   downloadButton.addEventListener("click", async () => {
     const promptText = getCvI18nText(
       "cv_download_prompt",
-      "Enter file name (extension is optional):",
+      "Enter file name only; it will always be saved as a .pdf file:",
     );
-    const rawName = window.prompt(promptText, DEFAULT_CV_FILENAME);
+    const rawName = window.prompt(promptText, DEFAULT_CV_BASENAME);
     if (rawName === null) {
       return;
     }
