@@ -183,7 +183,7 @@ html[data-theme="dark"] {
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -241,7 +241,7 @@ h4 {
    LAYOUT SHELL
    ============================================================ */
 
-.shell { width: var(--shell); margin: 0 auto; }
+.shell { width: var(--shell); max-width: 100%; margin: 0 auto; }
 
 /* ============================================================
    BACKGROUND ORBS
@@ -1451,6 +1451,7 @@ html[data-theme="dark"] .web-platform { color: #45D1FD; }
 
 .app-carousel-track {
   display: flex;
+  width: 100%;
   transition: transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -1691,10 +1692,10 @@ html.js .reveal.is-visible {
   h1 { font-size: clamp(1.7rem, 8.5vw, 2.4rem); }
   h2 { font-size: clamp(1.4rem, 6vw, 2rem); }
 
-  /* Orbs: smaller for perf */
-  .orb-1 { width: 260px; height: 260px; filter: blur(60px); }
-  .orb-2 { width: 200px; height: 200px; filter: blur(55px); }
-  .orb-3 { width: 150px; height: 150px; filter: blur(45px); }
+  /* Orbs: smaller and repositioned so they don't escape the viewport */
+  .orb-1 { width: 260px; height: 260px; filter: blur(60px); left: -40px; }
+  .orb-2 { width: 200px; height: 200px; filter: blur(55px); right: -20px; bottom: -60px; }
+  .orb-3 { width: 140px; height: 140px; filter: blur(45px); left: 35%; }
 
   .cursor-glow { display: none; }
 }
