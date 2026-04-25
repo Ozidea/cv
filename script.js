@@ -334,4 +334,20 @@ if (appTrack && appPrevBtn && appNextBtn) {
   appNextBtn.addEventListener("click", () => {
     if (currentAppSlide < appSlideKeys.length - 1) { currentAppSlide++; updateAppCarousel(); }
   });
+
+  // Touch swipe support
+  let touchStartX = 0;
+  appTrack.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+  appTrack.addEventListener("touchend", (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 48) {
+      if (diff > 0 && currentAppSlide < appSlideKeys.length - 1) {
+        currentAppSlide++; updateAppCarousel();
+      } else if (diff < 0 && currentAppSlide > 0) {
+        currentAppSlide--; updateAppCarousel();
+      }
+    }
+  }, { passive: true });
 }
