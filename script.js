@@ -66,6 +66,68 @@ function initTheme() {
 initTheme();
 
 /* ============================================================
+   EMAIL COPY
+   ============================================================ */
+
+const emailCopyButton = document.querySelector("[data-email-copy]");
+
+function copyTextToClipboard(text) {
+  if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+    return navigator.clipboard.writeText(text);
+  }
+
+  return new Promise((resolve, reject) => {
+    const tempTextarea = document.createElement("textarea");
+    tempTextarea.value = text;
+    tempTextarea.setAttribute("readonly", "true");
+    tempTextarea.style.position = "fixed";
+    tempTextarea.style.opacity = "0";
+    document.body.appendChild(tempTextarea);
+    tempTextarea.select();
+
+    try {
+      const success = document.execCommand("copy");
+      document.body.removeChild(tempTextarea);
+      if (success) {
+        resolve();
+      } else {
+        reject(new Error("Copy command failed"));
+      }
+    } catch (error) {
+      document.body.removeChild(tempTextarea);
+      reject(error);
+    }
+  });
+}
+
+if (emailCopyButton) {
+  const emailLabel = emailCopyButton.querySelector("small");
+  const defaultLabel = emailCopyButton.dataset.defaultLabel || emailLabel?.textContent || "";
+  const copiedLabel = emailCopyButton.dataset.copiedLabel || "Copied";
+  const emailAddress = emailCopyButton.dataset.email || defaultLabel;
+  let resetTimer = null;
+
+  emailCopyButton.addEventListener("click", async () => {
+    try {
+      await copyTextToClipboard(emailAddress);
+      if (emailLabel) {
+        emailLabel.textContent = copiedLabel;
+      }
+      emailCopyButton.setAttribute("aria-label", copiedLabel);
+      if (resetTimer) {
+        window.clearTimeout(resetTimer);
+      }
+      resetTimer = window.setTimeout(() => {
+        if (emailLabel) {
+          emailLabel.textContent = defaultLabel;
+        }
+        emailCopyButton.setAttribute("aria-label", "Copy email address");
+      }, 1800);
+    } catch (_error) {}
+  });
+}
+
+/* ============================================================
    CURSOR GLOW
    ============================================================ */
 

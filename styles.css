@@ -876,6 +876,7 @@ main {
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  width: 100%;
   padding: 0.85rem 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
@@ -883,7 +884,11 @@ main {
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
   color: var(--text);
+  text-align: left;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
   transition:
     transform var(--dur-2) var(--ease-spring),
     box-shadow var(--dur-2) var(--ease),
