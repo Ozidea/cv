@@ -1,4 +1,6 @@
 const CV_FILE_PATH = "assets/CV.pdf";
+// Keep the URL stable for Safari while forcing browsers/CDNs to fetch the latest PDF.
+const CV_FILE_URL = `${CV_FILE_PATH}?v=2026-07-05`;
 const DEFAULT_CV_BASENAME = "Celal-Oguz-Kurtoglu-CV";
 const DEFAULT_CV_FILENAME = `${DEFAULT_CV_BASENAME}.pdf`;
 
@@ -29,21 +31,13 @@ function normalizeCvFileName(input) {
 }
 
 async function downloadCvWithName(fileName) {
-  const response = await fetch(CV_FILE_PATH);
-  if (!response.ok) {
-    throw new Error(`CV fetch failed with status ${response.status}`);
-  }
-
-  const blob = await response.blob();
-  const objectUrl = URL.createObjectURL(blob);
   const link = document.createElement("a");
 
-  link.href = objectUrl;
+  link.href = CV_FILE_URL;
   link.download = fileName;
   document.body.append(link);
   link.click();
   link.remove();
-  URL.revokeObjectURL(objectUrl);
 }
 
 function setupCvDownload() {
@@ -68,9 +62,9 @@ function setupCvDownload() {
       downloadButton.disabled = true;
       await downloadCvWithName(fileName);
     } catch (error) {
-      // Fallback to direct link when blob download fails.
+      // Fallback to the same direct URL when programmatic download fails.
       const fallbackLink = document.createElement("a");
-      fallbackLink.href = CV_FILE_PATH;
+      fallbackLink.href = CV_FILE_URL;
       fallbackLink.download = fileName;
       fallbackLink.click();
 
