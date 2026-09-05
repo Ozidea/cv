@@ -1724,8 +1724,6 @@ html[data-theme="dark"] .web-platform { color: #45D1FD; }
   color: var(--text-faint);
   font-size: 0.77rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 /* ============================================================
